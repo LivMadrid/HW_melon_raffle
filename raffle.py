@@ -1,6 +1,7 @@
 """Read customer data from file and run a raffle."""
 
-from random import choice
+from random import random
+# this will include all the items from the random "crayon jar" and access items such as random.choice()
 
 
 class Customer(object):
@@ -41,9 +42,9 @@ def get_customers_from_file(customer_file_path):
 
 def pick_winner(customers):
     """Choose a random winner from list of customers."""
-# here is the error ! Because we did ' from random import choice' we have selected the module import item 'choice' 
-# We are unable to refer to random.choice() in namespace only choice().
-    chosen_customer = choice(customers)
+#  ! Because we did ' from random import choice' we have selected the module import item 'choice' 
+# We are unable to refer to random.choice() in namespace only choice(). 
+    chosen_customer = random.choice(customers)
 
     print("Tell {name} at {email} that they've won".format(
         name=chosen_customer.name,
