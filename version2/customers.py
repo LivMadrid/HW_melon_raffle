@@ -40,3 +40,5 @@ def get_customers_from_file(customer_file_path):
         customers.append(new_customer)
 
     return customers
+
+
