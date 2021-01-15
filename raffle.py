@@ -41,8 +41,9 @@ def get_customers_from_file(customer_file_path):
 
 def pick_winner(customers):
     """Choose a random winner from list of customers."""
-
-    chosen_customer = random.choice(customers)
+# here is the error ! Because we did ' from random import choice' we have selected the module import item 'choice' 
+# We are unable to refer to random.choice() in namespace only choice().
+    chosen_customer = choice(customers)
 
     print("Tell {name} at {email} that they've won".format(
         name=chosen_customer.name,
